@@ -1,0 +1,33 @@
+#whtpipeButton.whatsappPipeline {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 6px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 3px;
+    display: none;
+}
+
+#whtpipeButton.whatsappPipeline svg path {
+    fill: #2CB240;
+}
+
+#whtpipeButton.whatsappPipeline:hover {
+    background: #2CB240;
+}
+
+#whtpipeButton.whatsappPipeline:hover svg path {
+    fill: #fff;
+}
+
+.gridRow__cell[data-field="phone"] .value {
+    padding-left: 30px;
+    width: calc(100% - 22px);
+}
+
+.gridRow__cell[data-field="phone"] .value {
+    width: calc(100% - 35px) !important;
+}

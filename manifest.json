@@ -4,10 +4,6 @@
     "description": "Whatsapp web button to pipedrive",
     "manifest_version": 2,
     "permissions": ["https://*.pipedrive.com/*", "activeTab"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": true
-    },
     "content_scripts": [
         {
             "matches": ["https://*.pipedrive.com/*"],

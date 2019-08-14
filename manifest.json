@@ -3,8 +3,7 @@
     "version": "1.0",
     "description": "Whatsapp web button to pipedrive",
     "manifest_version": 2,
-    "options_page": "options.html",
-    "permissions": ["https://*.pipedrive.com/*", "activeTab", "declarativeContent"],
+    "permissions": ["https://*.pipedrive.com/*", "activeTab"],
     "background": {
         "scripts": ["background.js"],
         "persistent": true
@@ -17,10 +16,6 @@
         }
     ],
     "web_accessible_resources": ["images/16.png"],
-    "browser_action": {
-        "default_icon": "images/16.png",
-        "default_popup": "popup.html"
-    },
     "icons": {
         "16": "images/16.png",
         "32": "images/32.png",

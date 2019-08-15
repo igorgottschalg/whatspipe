@@ -1,22 +1,26 @@
 {
-    "name": "WhatsPipe",
-    "version": "1.0",
-    "description": "Whatsapp web button to pipedrive",
-    "manifest_version": 2,
-    "permissions": ["https://*.pipedrive.com/*", "activeTab"],
-    "content_scripts": [
-        {
-            "matches": ["https://*.pipedrive.com/*"],
-            "js": ["main.js"],
-            "css": ["style.css"]
-        }
-    ],
-    "web_accessible_resources": ["images/16.png"],
-    "icons": {
-        "16": "images/16.png",
-        "32": "images/32.png",
-        "48": "images/48.png",
-        "64": "images/64.png",
-        "128": "images/64.png"
+  "name": "WhatsPipe",
+  "version": "1.0",
+  "description": "Whatsapp web button to pipedrive",
+  "manifest_version": 2,
+  "permissions": ["https://*.pipedrive.com/*", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.pipedrive.com/*", "https://web.whatsapp.com/*"],
+      "js": [
+        "pipeDriveWhatsappExtension.js",
+        "whatsappExtension.js",
+        "main.js"
+      ],
+      "css": ["style.css"]
     }
+  ],
+  "web_accessible_resources": ["images/16.png"],
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "64": "images/64.png",
+    "128": "images/64.png"
+  }
 }

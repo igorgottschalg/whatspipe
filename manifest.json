@@ -3,14 +3,19 @@
   "version": "1.0",
   "description": "Whatsapp web button to pipedrive",
   "manifest_version": 2,
-  "permissions": ["https://*.pipedrive.com/*", "activeTab"],
+  "permissions": ["tabs", "activeTab"],
+  "background": {
+    "scripts": ["main.js"],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "matches": ["https://*.pipedrive.com/*", "https://web.whatsapp.com/*"],
       "js": [
-        "pipeDriveWhatsappExtension.js",
         "whatsappExtension.js",
-        "main.js"
+        "pipeDriveWhatsappExtension.js",
+        "pipeDriveWhatsappExtensionDeal.js",
+        "content.js"
       ],
       "css": ["style.css"]
     }

@@ -16,4 +16,8 @@ checkUrl(window.location.href);
 
 chrome.runtime.onMessage.addListener(request => {
   if (request.message === "url_updated") checkUrl(request.url);
+  if (request.message === "whatsappMessage") {
+    pipeDeal.changeMessage(request.whatsappMessage);
+    pipe.changeMessage(request.whatsappMessage);
+  }
 });

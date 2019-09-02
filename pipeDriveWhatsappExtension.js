@@ -43,6 +43,10 @@ class pipeDriveWhatsappExtension {
     );
   }
 
+  changeMessage(message) {
+    this.whatsappMessage = message;
+  }
+
   phoneSanitize(phone) {
     let cleanNumber = phone.innerText.match(/[0-9|\+]/g).join("");
     return cleanNumber.indexOf("+55") === 0
@@ -86,7 +90,14 @@ class pipeDriveWhatsappExtension {
     document.body.prepend(whtpipeButton);
     this.whtpipeButtonElement = document.querySelector("#whtpipeButton");
     this.whtpipeButtonElement.addEventListener("click", () => {
-      window.open(`//api.whatsapp.com/send?phone=${this.currentNumber}`);
+      let text = "";
+      let user = document.querySelector(
+        ".detailViewWrapper .fieldsView .fieldsList>div .item.customNameField .contactNameWrapper .contactName"
+      ).innerText;
+      text = "Olá {usuario}, tudo bem?".replace("{usuario}", user);
+      window.open(
+        `//api.whatsapp.com/send?phone=${this.currentNumber}&text=${text}`
+      );
     });
   }
 }

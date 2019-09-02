@@ -12,6 +12,7 @@
 }
 
 #whtpipeButton.whatsappPipelineDeal {
+  outline: none;
   position: fixed;
   width: 40px;
   height: 40px;

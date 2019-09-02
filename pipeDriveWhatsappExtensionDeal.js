@@ -16,6 +16,10 @@ class pipeDriveWhatsappExtensionDeal {
     }
   }
 
+  changeMessage(message) {
+    this.whatsappMessage = message;
+  }
+
   createButton() {
     jQuery(document).ready(() => {
       this.destroy();
@@ -38,7 +42,12 @@ class pipeDriveWhatsappExtensionDeal {
             cleanNumber.indexOf("+55") === 0
               ? cleanNumber.replace("+", "")
               : `55${cleanNumber}`;
-          window.open(`//api.whatsapp.com/send?phone=${phone}`);
+          let text = "";
+          let user = jQuery(
+            ".detailViewWrapper .fieldsView .fieldsList>div .item.customNameField .contactNameWrapper .contactName"
+          ).text();
+          text = "Olá {usuario}, tudo bem?".replace("{usuario}", user);
+          window.open(`//api.whatsapp.com/send?phone=${phone}&text=${text}`);
         }
       });
       jQuery("body").append(whtpipeButton);

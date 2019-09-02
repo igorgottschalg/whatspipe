@@ -3,18 +3,17 @@ let pipe, whats, pipeDeal;
 pipe = new pipeDriveWhatsappExtension();
 pipeDeal = new pipeDriveWhatsappExtensionDeal();
 
-const checkUrl = () => {
-  console.log("Checking URL");
+const checkUrl = url => {
   pipe.destroy();
   pipeDeal.destroy();
-  if (window.location.href.indexOf("persons") > 0) {
+  if (url.indexOf("persons") > 0) {
     pipe.init();
-  } else if (window.location.href.indexOf("deal")) {
+  } else if (url.indexOf("deal") > 0) {
     pipeDeal.init();
   }
 };
-checkUrl();
+checkUrl(window.location.href);
 
 chrome.runtime.onMessage.addListener(request => {
-  if (request.message === "url_updated") checkUrl();
+  if (request.message === "url_updated") checkUrl(request.url);
 });

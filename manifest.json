@@ -13,6 +13,7 @@
       "matches": ["https://*.pipedrive.com/*", "https://web.whatsapp.com/*"],
       "js": [
         "whatsappExtension.js",
+        "jquery.js",
         "pipeDriveWhatsappExtension.js",
         "pipeDriveWhatsappExtensionDeal.js",
         "content.js"

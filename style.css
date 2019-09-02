@@ -1,80 +1,80 @@
 #whtpipeButton {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    padding: 6px;
-    z-index: 999;
-    cursor: pointer;
-    border-radius: 3px;
-    display: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 6px;
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 3px;
+  display: none;
 }
 
 #whtpipeButton.whatsappPipelineDeal {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    bottom: 20px;
-    right: 20px;
-    background: #2CB240;
-    position: fiex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    z-index: 999;
-    cursor: pointer;
-    border-radius: 100px;
-    color: #fff;
-    border: 2px solid #fff;
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  bottom: 20px;
+  right: 20px;
+  background: #2cb240;
+  position: fiex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 100px;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
 }
 
 #whtpipeButton.whatsappPipelineDeal svg > path {
-    fill: #fff;
+  fill: #fff;
 }
 
 #whtpipeButton svg path {
-    fill: #2CB240;
+  fill: #2cb240;
 }
 
 #whtpipeButton:hover {
-    background: #2CB240;
+  background: #2cb240;
 }
 
 #whtpipeButton:hover svg path {
-    fill: #fff;
+  fill: #fff;
 }
 
 .gridRow__cell[data-field="phone"] .value {
-    padding-left: 30px;
-    width: calc(100% - 22px);
+  padding-left: 30px;
+  width: calc(100% - 22px);
 }
 
 .gridRow__cell[data-field="phone"] .value {
-    width: calc(100% - 35px) !important;
+  width: calc(100% - 35px) !important;
 }
 
 .whatsappCopyChat {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    bottom: auto;
-    top: 80px;
-    right: 20px;
-    background: #2CB240;
-    position: fiex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    z-index: 999;
-    cursor: pointer;
-    border-radius: 100px;
-    color: #fff;
-    border: 2px solid #fff;
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  bottom: auto;
+  top: 80px;
+  right: 20px;
+  background: #2cb240;
+  position: fiex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 100px;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
 }

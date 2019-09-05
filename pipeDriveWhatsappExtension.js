@@ -60,6 +60,10 @@ class pipeDriveWhatsappExtension {
     this.whtpipeButtonElement.style.left = `${Math.round(x)}px`;
     this.whtpipeButtonElement.style.top = `${Math.round(y)}px`;
     this.currentNumber = this.phoneSanitize(phone);
+    this.user = jQuery(cell.parentElement.parentElement.parentElement)
+      .find("td[data-field='name'] a")
+      .text();
+    if (this.user) this.user = this.user.split(" ")[0];
   }
 
   phonesSetEvents() {
@@ -91,10 +95,7 @@ class pipeDriveWhatsappExtension {
     this.whtpipeButtonElement = document.querySelector("#whtpipeButton");
     this.whtpipeButtonElement.addEventListener("click", () => {
       let text = "";
-      let user = document.querySelector(
-        ".detailViewWrapper .fieldsView .fieldsList>div .item.customNameField .contactNameWrapper .contactName"
-      ).innerText;
-      text = "Olá {usuario}, tudo bem?".replace("{usuario}", user);
+      text = "Olá {usuario}, tudo bem?".replace("{usuario}", this.user);
       window.open(
         `//api.whatsapp.com/send?phone=${this.currentNumber}&text=${text}`
       );

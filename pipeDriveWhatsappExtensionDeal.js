@@ -46,6 +46,7 @@ class pipeDriveWhatsappExtensionDeal {
           let user = jQuery(
             ".detailViewWrapper .fieldsView .fieldsList>div .item.customNameField .contactNameWrapper .contactName"
           ).text();
+          if (user) user = user.split(" ")[0];
           text = "Olá {usuario}, tudo bem?".replace("{usuario}", user);
           window.open(`//api.whatsapp.com/send?phone=${phone}&text=${text}`);
         }

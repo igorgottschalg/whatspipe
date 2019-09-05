@@ -10,15 +10,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       url: changeInfo.url
     });
 
-    getMessage();
+    chrome.storage.sync.get("message", items => {
+      chrome.tabs.sendMessage(tabId, {
+        message: "whatsappMessage",
+        whatsappMessage: items.message
+      });
+    });
   }
 });
-
-const getMessage = () => {
-  chrome.storage.sync.get("message", items => {
-    chrome.tabs.sendMessage(tabId, {
-      message: "whatsappMessage",
-      whatsappMessage: items.message
-    });
-  });
-};

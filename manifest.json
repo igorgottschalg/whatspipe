@@ -1,6 +1,6 @@
 {
   "name": "WhatsPipe Escola EDTI",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Whatsapp web button to pipedrive by Escola EDTI",
   "manifest_version": 2,
   "permissions": ["tabs", "activeTab", "storage"],
